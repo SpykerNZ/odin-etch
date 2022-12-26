@@ -16,6 +16,14 @@ button,input {
     gap: 24px;
 }
 
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    gap: 24px;
+}
+
 .table {
     display: grid;
     margin: auto;
@@ -23,7 +31,8 @@ button,input {
     grid-template-rows: repeat(var(--numRows), 1fr);
     width: 550px;
     height: 550px;
-    border: black solid 8px;
+    border: black solid 4px;
+    border-radius: 4px;
 }
 
 .element {

@@ -55,9 +55,11 @@ function generateGrid(rowSize, columnSize) {
         elemDiv.addEventListener('mouseleave', onExit);
         tableDiv.appendChild(elemDiv);
     }
+    const footer = document.querySelector('.footer');
+
     document.documentElement.style.setProperty('--numCols', numberOfColumns);
     document.documentElement.style.setProperty('--numRows', numberOfRows);
-    document.body.appendChild(tableDiv);
+    document.body.insertBefore(tableDiv, footer);
 }
 
 const changeGridSizeButton = document.querySelector(".sizeButton");
