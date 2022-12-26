@@ -1,10 +1,10 @@
 
 function onEnter(e) {
-    e.target.style.backgroundColor = selectedColor;
+    e.target.style.backgroundColor = 'red';
 }
 
 function onExit(e) {
-    // e.target.style.backgroundColor = selectedColor;
+    e.target.style.backgroundColor = selectedColor;
 }
 
 function changeColor(e) {
@@ -46,23 +46,17 @@ function generateGrid(rowSize, columnSize) {
 
     tableDiv.className = 'table';
 
-    for (let i=0; i<numberOfColumns; i++)
+    for (let i=0; i<numberOfColumns*numberOfRows; i++)
     {
-        const colDiv = document.createElement("div");
-        colDiv.classList.add('element','col');
-        colDiv.dataset.index = `${i}`;
-        
-        for (let j=0; j<numberOfRows; j++)
-        {
-            const rowDiv = document.createElement("div");
-            rowDiv.classList.add('element','row');
-            rowDiv.dataset.index = `${j}`;
-            rowDiv.addEventListener('mouseenter', onEnter);
-            rowDiv.addEventListener('mouseleave', onExit);
-            colDiv.appendChild(rowDiv);
-        }
-        tableDiv.appendChild(colDiv);
+        const elemDiv = document.createElement("div");
+        elemDiv.classList.add('element');
+        elemDiv.dataset.index = `${i}`;
+        elemDiv.addEventListener('mouseenter', onEnter);
+        elemDiv.addEventListener('mouseleave', onExit);
+        tableDiv.appendChild(elemDiv);
     }
+    document.documentElement.style.setProperty('--numCols', numberOfColumns);
+    document.documentElement.style.setProperty('--numRows', numberOfRows);
     document.body.appendChild(tableDiv);
 }
 

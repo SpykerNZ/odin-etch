@@ -17,20 +17,20 @@ button,input {
 }
 
 .table {
-    display: flex;
-    width: 100%;
-}
-
-.col {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-.row {
-    height: 50px;
+    display: grid;
+    margin: auto;
+    grid-template-columns: repeat(var(--numCols), 1fr);
+    grid-template-rows: repeat(var(--numRows), 1fr);
+    width: 550px;
+    height: 550px;
+    border: black solid 8px;
 }
 
 .element {
     border: solid 1px black;
+}
+
+:root {
+    --numCols: 16;
+    --numRows: 16;
 }
