@@ -1,0 +1,36 @@
+
+body {
+    background-color: lightblue;
+}
+
+button,input {
+    width: 100px;
+    height: 32px;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    gap: 24px;
+}
+
+.table {
+    display: flex;
+    width: 100%;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.row {
+    height: 50px;
+}
+
+.element {
+    border: solid 1px black;
+}
