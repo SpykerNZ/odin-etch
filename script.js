@@ -1,6 +1,6 @@
 
 function onEnter(e) {
-    e.target.style.backgroundColor = 'red';
+    e.target.style.backgroundColor = 'white';
 }
 
 function onExit(e) {
