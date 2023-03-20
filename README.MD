@@ -6,8 +6,8 @@
 
 ## About
 
-- Hover to draw and press clear to reset the board
-- Change size of the board, drawing color
+- Hover mouse over the square to draw
+- Use bottom controls to change board size, select drawing color and erase the grid.
 - Built using HTML, CSS and Javascript
 
 ## Acknowledgedment
